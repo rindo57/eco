@@ -1,8 +1,8 @@
 # define Python user-defined exceptions
-from pydantic import PydanticValueError, BaseModel
+from pydantic import ValidationError, BaseModel
 
 
-class Error(PydanticValueError):
+class Error(ValidationError):
     """Base class for other exceptions"""
     code: str = ''
     msg_template: str = ''
